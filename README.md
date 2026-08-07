@@ -1,4 +1,4 @@
-# Демо ui-тестов под 2-х уровневую архитектуру
+# Демо тестов под 2-х уровневую архитектуру
 
 [![Java](https://img.shields.io/badge/Java-25-blue)](https://www.oracle.com/java/)
 [![JUnit](https://img.shields.io/badge/JUnit-5.10%2B-green)](https://junit.org/junit5/)
