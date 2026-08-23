@@ -1,26 +1,20 @@
 package utils;
 
+import java.util.Objects;
+
 public class User {
-    String firstName;
-    String lastName;
-    String login;
-    String password;
-    String postalCode;
+    private String firstName;
+    private String lastName;
+    private String login;
+    private String password;
+    private String postalCode;
 
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getLogin() {
@@ -50,5 +44,28 @@ public class User {
     public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "User{firstName='" + getFirstName() +
+                "', lastName='" + getLastName() +
+                "', login='" + getLogin() +
+                "', postalCode='" + getPostalCode() +
+                "'}";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        User user = (User) obj;
+        return Objects.equals(getLogin(), user.getLogin()) && Objects.equals(getPassword(), user.getPassword());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getLogin(), getPassword());
     }
 }

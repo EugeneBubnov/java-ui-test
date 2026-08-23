@@ -35,16 +35,19 @@ public class CheckoutStepper {
                     () -> assertEquals(product.get("price"), $(".inventory_item_price").getText())
             );
             assertAll("Информация о платеже",
-                    () -> assertEquals($(".summary_info_label:first-child").getText(),
+                    () -> assertEquals(
+                            $(".summary_info_label:first-child").getText(),
                             "Payment Information:"
                     ),
                     () -> assertTrue($(".summary_value_label:nth-child(2)").getText().contains("SauceCard #"))
             );
             assertAll("Информация о доставке",
-                    () -> assertEquals($(".summary_info_label:nth-child(3)").getText(),
+                    () -> assertEquals(
+                            $(".summary_info_label:nth-child(3)").getText(),
                             "Shipping Information:"
                     ),
-                    () -> assertEquals($(".summary_value_label:nth-child(4)").getText(),
+                    () -> assertEquals(
+                            $(".summary_value_label:nth-child(4)").getText(),
                             "Free Pony Express Delivery!"
                     )
             );
