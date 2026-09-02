@@ -3,11 +3,16 @@ package utils;
 import java.util.Objects;
 
 public class User {
-    private String firstName;
-    private String lastName;
+    private final String firstName;
+    private final String lastName;
     private String login;
     private String password;
     private String postalCode;
+
+    public User(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -39,11 +44,6 @@ public class User {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
-    }
-
-    public User(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
     }
 
     @Override

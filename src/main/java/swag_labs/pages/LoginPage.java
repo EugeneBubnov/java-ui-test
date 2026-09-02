@@ -7,8 +7,8 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.*;
 
 public class LoginPage {
-    String pageTitle = "Страница авторизации";
-    String pageUrl = "https://www.saucedemo.com/";
+    private final String pageTitle = "Страница авторизации";
+    private final String pageUrl = "https://www.saucedemo.com/";
 
     public LoginPage openPage() {
         step("Открыть страницу: " + pageTitle, () -> open(pageUrl));

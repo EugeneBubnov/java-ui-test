@@ -12,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class InventoryItemPage {
-
     public InventoryPage clickOnBackToProductsBtn() {
         step("Нажать кнопку: Back to products", () -> {
             $("#back-to-products").shouldBe(Condition.visible).click();
